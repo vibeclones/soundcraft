@@ -6,4 +6,4 @@ Hosted copies of the browser (WebAssembly) builds of [soundcraft](https://github
 - Specific version: `/soundcraft/v<version>/`
 - Version list: `/soundcraft/versions.json`
 
-Each version folder is the unmodified contents of upstream's `soundcraft-web-<version>.zip` release asset, including its license files. Upstream license: . A scheduled workflow mirrors new releases.
+Each version folder is the unmodified contents of upstream's `soundcraft-web-<version>.zip` release asset, including its license files. Upstream license: Apache-2.0. A scheduled workflow mirrors new releases.
