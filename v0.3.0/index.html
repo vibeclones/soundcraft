@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>SoundCraft</title>
+  <link rel="icon" href="./ai.storyteller.soundcraft-4f86cc0f1d19c49f.png" integrity="sha384-gGGdqNRRqqtc1O6hUsGr2t6crDCmPT5aQ88HrS63AGKTx8mtjcAwCaMFzW6yzgT0"/>
+  
+<script type="module">
+import init, * as bindings from './soundcraft-web-3c5f0402e4269147.js';
+const wasm = await init({ module_or_path: './soundcraft-web-3c5f0402e4269147_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  <style>
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #1e1f22; }
+    #soundcraft_canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    #soundcraft_loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: #b8b8b8; font: 14px system-ui, sans-serif; pointer-events: none; }
+  </style>
+<link rel="modulepreload" href="./soundcraft-web-3c5f0402e4269147.js" crossorigin="anonymous" integrity="sha384-S3KfcbZLZREd5lEbLKvW4iujn1yI29wkTmE+osMzNHV/ntYCL7RKtSu4QMMkWisC"><link rel="preload" href="./soundcraft-web-3c5f0402e4269147_bg.wasm" crossorigin="anonymous" integrity="sha384-lRO2pt3ReqDq+wP+bFB5u1NH8XTc6Y08MlIpPRew3EEt51xRUu8ocuEefrSmrXiE" as="fetch" type="application/wasm"></head>
+<body>
+  <canvas id="soundcraft_canvas"></canvas>
+  <div id="soundcraft_loading">Loading SoundCraft&hellip;</div>
+</body>
+</html>
